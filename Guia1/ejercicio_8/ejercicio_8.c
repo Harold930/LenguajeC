@@ -15,6 +15,8 @@ int main()
     
     if((st=scanf("%lu",&n)) != 1){
         printf("%s", "Tipo de caracter erroneo! \n");
+        return 1;
+        
     }
 
     if(n < 0){
