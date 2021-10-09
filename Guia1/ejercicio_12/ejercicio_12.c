@@ -9,8 +9,10 @@ validaciones que considere necesarias.*/
 int main()
 {
     int st,cantidad, i;
+    float auxMax = 0;
+    float  auxMin = 0;
+    float n = 0;
     float nCurrent = 0;
-    float auxMax, auxMin,n;
     
     printf("%s","Ingrese la cantidad de valores a evaluar: \n");
     
@@ -19,14 +21,16 @@ int main()
     }
     
    for(i=1; i<=cantidad; i++){
-    printf("%s","Ingrese el valor: \n");
+    printf("%s","Ingrese el valor: \n ");
     scanf("%f",&n);
-    if(n > nCurrent){
+    
+    if(n > auxMax){
         auxMax = n;
-    } else {
+    }  
+    if(n <= auxMin){
         auxMin = n;
     }
-    nCurrent = n;
+
   }
     printf("%s %.3f %s %.3f","Valor máximo ingresado:",auxMax,"Valor mínimo ingresado", auxMin);
 
